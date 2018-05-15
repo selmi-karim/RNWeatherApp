@@ -2,12 +2,12 @@ import React from 'react';
 import Home from './components/Home.js';
 import About from './components/About.js';
 import Search from './components/Search.js'
-import {TabNavigator} from 'react-navigation';
+import {createMaterialTopTabNavigator} from 'react-navigation';
 
-const Tabs = TabNavigator({
+const Tabs = createMaterialTopTabNavigator({
+    Home: { screen: Home },
     Search: { screen: Search },
     About: { screen: About },
-    Home: { screen: Home }
 })
 export default class App extends React.Component {
   render() {
