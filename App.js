@@ -5,9 +5,9 @@ import Search from './components/Search.js'
 import {TabNavigator} from 'react-navigation';
 
 const Tabs = TabNavigator({
-    Search: {screen: Search},
-    About: {Screen:About},
-    Home: {screen: Home}
+    Search: { screen: Search },
+    About: { screen: About },
+    Home: { screen: Home }
 })
 export default class App extends React.Component {
   render() {
