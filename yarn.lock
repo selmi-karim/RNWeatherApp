@@ -5637,7 +5637,7 @@ react-navigation-deprecated-tab-navigator@1.2.0:
   dependencies:
     react-native-tab-view "^0.0.74"
 
-react-navigation-material-bottom-tabs@^0.1.2:
+react-navigation-material-bottom-tabs@0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/react-navigation-material-bottom-tabs/-/react-navigation-material-bottom-tabs-0.1.2.tgz#7571ddea8e3749feb668e589d4b2edef8b02738a"
   dependencies:
@@ -5666,7 +5666,7 @@ react-navigation-tabs@0.2.0-rc.0:
     react-native-safe-area-view "^0.7.0"
     react-native-tab-view "~0.0.77"
 
-react-navigation@^2.0.1:
+react-navigation@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/react-navigation/-/react-navigation-2.0.1.tgz#adeba4eb16307c0f740c6c9efafd0c0aa6d47002"
   dependencies:

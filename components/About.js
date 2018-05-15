@@ -11,6 +11,7 @@ export default class About extends React.Component {
                 <Text> welcome to the jungle xD check my personal website for
                     more informations: karimation.com
                 </Text>
+                
 
             </View>
         )
