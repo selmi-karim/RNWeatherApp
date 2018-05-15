@@ -12,7 +12,7 @@ class Search extends React.Component {
         }
     }
     submit () {
-        this.props.navigation.navigate('List');
+        this.props.navigation.navigate('List', {city: this.state.city});
     }
     setCity (city) {
         this.setState({city})
@@ -36,7 +36,7 @@ export default createStackNavigator({
     Search: {
         screen: Search
     },
-    Result: {
+    List: {
         screen: List
     }
 
