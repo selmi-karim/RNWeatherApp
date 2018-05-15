@@ -1,15 +1,24 @@
 import React from 'react';
-import {view, Text} from 'react-native';
+import { View, Text, TextInput } from 'react-native';
 
-
-export default class Home extends React.Component {
-
+export default class Search extends React.Component {
+    constructor (props) {
+        super(props)
+        this.state = {
+            city: 'Sousse'
+        }
+    }
+    setCity (city) {
+        this.setState({city})
+    }
     render() {
         return (
-            <View>
-                <Text> Welcome To Homme </Text>
-
-            </View>
+            <TextInput 
+            underLineColorAndroid='transparent'
+            onChangeText={(text) => this.setCity(text)}
+            style={{height:40, borderColor: 'gray', borderWidth: 1,marginBottom:50}}
+            value={this.state.city}            
+            />
         )
     }
 }

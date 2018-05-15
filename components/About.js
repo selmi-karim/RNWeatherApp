@@ -1,8 +1,8 @@
 import React from 'react';
-import {view, Text} from 'react-native';
+import {View, Text} from 'react-native';
 
 
-export default class Home extends React.Component {
+export default class About extends React.Component {
 
     render() {
         return (
