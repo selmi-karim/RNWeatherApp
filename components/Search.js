@@ -1,7 +1,10 @@
 import React from 'react';
 import { View, Text, TextInput, Button } from 'react-native';
+import {createStackNavigator} from 'react-navigation';
+import List from './List.js'
+import globalStyle from './styles/styles.js'
 
-export default class Search extends React.Component {
+class Search extends React.Component {
     constructor (props) {
         super(props)
         this.state = {
@@ -9,22 +12,32 @@ export default class Search extends React.Component {
         }
     }
     submit () {
-        console.log('find weather in blabla city')
+        this.props.navigation.navigate('List');
     }
     setCity (city) {
         this.setState({city})
     }
     render() {
         return (
-            <View>
+            <View style={globalStyle.container}>
                 <TextInput 
                 underLineColorAndroid='transparent'
                 onChangeText={(text) => this.setCity(text)}
                 style={{height:40, borderColor: 'gray', borderWidth: 1,marginBottom:50}}
                 value={this.state.city}            
                 />
-                <Button onPress={ () => this.submit()} title="Find" />
+                <Button style={globalStyle.button} onPress={ () => this.submit()} title="Find" />
             </View>
         )
     }
 }
+
+export default createStackNavigator({
+    Search: {
+        screen: Search
+    },
+    Result: {
+        screen: List
+    }
+
+});
