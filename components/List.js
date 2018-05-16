@@ -1,6 +1,9 @@
 import React from 'react';
-import {View, Text, Button, ActivityIndicator} from 'react-native';
+import {View, Text, Button, ActivityIndicator, ListView} from 'react-native';
+import axios from 'axios';
+import DisplayRow from './DisplayRow.js'
 import globalStyle from './styles/styles.js'
+
 
 export default class List extends React.Component {
     static navigationOptions = ({navigation}) => {
@@ -14,7 +17,7 @@ export default class List extends React.Component {
         super(props)
         console.log('state', this.props.navigation.state)
         this.state = {
-            city:  'sousse',//this.props.navigation.state.params.city,
+            city:  'Sousse',//this.props.navigation.state.params.city,
             report: null
         }
         this.fetchWeather()
@@ -22,8 +25,9 @@ export default class List extends React.Component {
 
     fetchWeather () {
         axios.get(`https://meteotnapi.herokuapp.com/api?city=${this.state.city}`)
-        .ther((response) => {
-            
+        .then((response) => {
+            console.log(response.data);
+            this.setState({report: response.data})            
         })
     }
     render() {
@@ -32,9 +36,14 @@ export default class List extends React.Component {
                 <ActivityIndicator color={globalStyle.color} size='large'/>
             )
         }else {
+            const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+
             return (
                 <View style={globalStyle.container}>
-                    <Text style={globalStyle.title}> youpiii </Text>
+                    <ListView
+                        dataSource={ds.cloneWithRows(this.state.report)}
+                        renderRow={(row, j, k) => <DisplayRow day={row} index={parseInt(k,10)} /> }    
+                    />
                 </View>
             )
         }
