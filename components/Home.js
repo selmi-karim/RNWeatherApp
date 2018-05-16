@@ -3,6 +3,9 @@ import {View, Text, Button} from 'react-native';
 import globalStyle from './styles/styles.js'
 
 export default class Home extends React.Component {
+    static navigationOptions = {
+        title: 'Home',
+    };
 
     search () {
         this.props.navigation.navigate('Search');

@@ -23,7 +23,7 @@ class Search extends React.Component {
                 <TextInput 
                 underLineColorAndroid='transparent'
                 onChangeText={(text) => this.setCity(text)}
-                style={{height:40, borderColor: 'gray', borderWidth: 1,marginBottom:50}}
+                style={{height:40, borderColor: 'gray', borderWidth: 1}}
                 value={this.state.city}            
                 />
                 <Button style={globalStyle.button} onPress={ () => this.submit()} title="Find" />
