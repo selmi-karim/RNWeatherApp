@@ -15,7 +15,6 @@ export default class List extends React.Component {
 
     constructor (props) {
         super(props)
-        console.log('state', this.props.navigation.state)
         this.state = {
             city:  'Sousse',//this.props.navigation.state.params.city,
             report: null
@@ -26,7 +25,7 @@ export default class List extends React.Component {
     fetchWeather () {
         axios.get(`https://meteotnapi.herokuapp.com/api?city=${this.state.city}`)
         .then((response) => {
-            console.log(response.data);
+            //console.log(response.data);
             this.setState({report: response.data})            
         })
     }
@@ -37,12 +36,11 @@ export default class List extends React.Component {
             )
         }else {
             const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-
             return (
                 <View style={globalStyle.container}>
                     <ListView
                         dataSource={ds.cloneWithRows(this.state.report)}
-                        renderRow={(row, j, k) => <DisplayRow day={row} index={parseInt(k,10)} /> }    
+                        renderRow={(row, j, k) => <DisplayRow day={row} index={k} /> }    
                     />
                 </View>
             )
