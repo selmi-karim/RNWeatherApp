@@ -8,7 +8,8 @@ export default class About extends React.Component {
     render() {
         return (
             <View style={globalStyle.container}>
-                <Text style={globalStyle.title}> welcome to the jungle xD check my personal website for
+                <Text style={globalStyle.title}>I'm a Full Stack Javascript Developer
+                    Check my personal website for
                     more informations: karimation.com
                 </Text>
             </View>

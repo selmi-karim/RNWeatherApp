@@ -18,6 +18,5 @@ export default {
         fontSize: 19,
         color: '#f47a42'
     }
-    
 
 }
