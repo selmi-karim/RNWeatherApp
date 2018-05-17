@@ -29,6 +29,9 @@ export default class List extends React.Component {
             this.setState({report: response.data})            
         })
     }
+    displayError(){
+
+    }
     render() {
         if(this.state.report === null ){
             return (
@@ -39,8 +42,8 @@ export default class List extends React.Component {
             return (
                 <View style={globalStyle.container}>
                     <ListView
-                        dataSource={ds.cloneWithRows(this.state.report)}
-                        renderRow={(row, j, k) => <DisplayRow day={row} index={k} /> }    
+                        dataSource={ds.cloneWithRows(this.state.report) }                        
+                        renderRow={ (row) => <DisplayRow day={row}  /> }    
                     />
                 </View>
             )
