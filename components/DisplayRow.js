@@ -11,11 +11,11 @@ export default class Row extends React.Component {
     render () {
         return (
             <View style={globalStyle.container}>
-                <Text style={globalStyle.dayTitle}> {this.props.index} </Text>
-                <Text>TempMin: {this.props.day.tempMin} </Text>
-                <Text>TempMax: {this.props.day.tempMax} </Text>
-                <Text>ForceVente: {this.props.day.forceVente} </Text>
-                <Text>directionVente: {this.props.day.forceVente} </Text>
+                <Text style={globalStyle.dayTitle}>{this.props.index} </Text>
+                <Text>Temperature Min: {this.props.day.tempMin} </Text>
+                <Text>Temperature Max: {this.props.day.tempMax} </Text>
+                <Text>Force de Vente: {this.props.day.forceVente} </Text>
+                <Text>Direction de Vente: {this.props.day.forceVente} </Text>
             </View>
         )
     }

@@ -24,7 +24,7 @@ class Search extends React.Component {
                 underLineColorAndroid='transparent'
                 onChangeText={(text) => this.setCity(text)}
                 style={{height:40, borderColor: 'gray', borderWidth: 1}}
-                value={this.state.city}            
+                defaultValue={this.state.city}            
                 />
                 <Button style={globalStyle.button} onPress={ () => this.submit()} title="Find" />
             </View>
