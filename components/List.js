@@ -43,7 +43,7 @@ export default class List extends React.Component {
                 <View style={globalStyle.container}>
                     <ListView
                         dataSource={ds.cloneWithRows(this.state.report) }                        
-                        renderRow={ (row) => <DisplayRow day={row}  /> }    
+                        renderRow={ (row, j, k) => <DisplayRow day={row} index={k}  /> }    
                     />
                 </View>
             )
