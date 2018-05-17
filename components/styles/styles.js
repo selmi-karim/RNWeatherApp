@@ -13,6 +13,10 @@ export default {
     title: {
         fontSize: 22,
         marginBottom: 20
+    },
+    dayTitle: {
+        fontSize: 19,
+        color: '#f47a42'
     }
     
 
