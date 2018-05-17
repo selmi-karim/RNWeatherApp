@@ -25,8 +25,8 @@ export default class List extends React.Component {
     fetchWeather () {
         axios.get(`https://meteotnapi.herokuapp.com/api?city=${this.state.city}`)
         .then((response) => {
-            console.log(response.data);
-            console.log(typeof response.data)
+            //console.log(response.data.city);
+            //console.log(typeof response.data.error)
             this.setState({report: response.data})            
         })
     }
