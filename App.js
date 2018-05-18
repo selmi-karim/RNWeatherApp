@@ -9,6 +9,7 @@ const Tabs = createMaterialTopTabNavigator({
     Search: { screen: Search },
     About: { screen: About },
 })
+
 export default class App extends React.Component {
   render() {
     return (
