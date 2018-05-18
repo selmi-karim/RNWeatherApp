@@ -3,9 +3,6 @@ import {View, Text, Button} from 'react-native';
 import globalStyle from './styles/styles.js'
 
 export default class Home extends React.Component {
-    static navigationOptions = {
-        title: 'Home',
-    };
 
     search () {
         this.props.navigation.navigate('Search');
@@ -13,7 +10,9 @@ export default class Home extends React.Component {
     render() {
         return (
             <View style={globalStyle.container}>
-                <Text style={globalStyle.title}> i don't want to waste your time, this is a fake screen </Text>
+                <Text style={globalStyle.title}> 
+                Weather like you’ve never seen before ;)
+                </Text>
                 <Button style={globalStyle.button} onPress={ () => this.search()} title="search"/>
             </View>
         )

@@ -8,7 +8,7 @@ export default {
         color: '#FFFFFF'
     },
     container: {
-        margin: 20
+        margin: 20,
     },
     title: {
         fontSize: 22,
@@ -17,6 +17,14 @@ export default {
     dayTitle: {
         fontSize: 19,
         color: '#f47a42'
+    },
+    profil: {
+        justifyContent: 'center', 
+        alignItems: 'center'
+    },
+    img: {
+        width: 200, 
+        height: 200,
     }
 
 }

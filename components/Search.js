@@ -21,7 +21,7 @@ class Search extends React.Component {
         return (
             <View style={globalStyle.container}>
                 <Text style={globalStyle.dayTitle} > 
-                Enter a City name (in Tunisia) and saw current weather data 
+                Enter a City name (in Tunisia) and saw current weather data  
                 </Text>
                 <TextInput 
                 underLineColorAndroid='transparent'
