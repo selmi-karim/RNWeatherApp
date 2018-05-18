@@ -11,7 +11,7 @@ export default class Home extends React.Component {
         return (
             <View style={globalStyle.container}>
                 <Text style={globalStyle.title}> 
-                Weather like you’ve never seen before ;)
+                 Pinger Weather like you’ve never seen before ;)
                 </Text>
                 <Button style={globalStyle.button} onPress={ () => this.search()} title="search"/>
             </View>
