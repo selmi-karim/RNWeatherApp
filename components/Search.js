@@ -5,6 +5,7 @@ import List from './List.js'
 import globalStyle from './styles/styles.js'
 
 class Search extends React.Component {
+
     constructor (props) {
         super(props)
         this.state = {
@@ -34,12 +35,17 @@ class Search extends React.Component {
     }
 }
 
-export default createStackNavigator({
-    Search: {
+export default createStackNavigator(
+    {
+        Search: {
         screen: Search
+        },
+        List: {
+            screen: List
+        }
     },
-    List: {
-        screen: List
-    }
-
-});
+    {
+        headerMode: 'none',
+        mode: 'modal',
+    });
+    

@@ -8,7 +8,7 @@ import globalStyle from './styles/styles.js'
 export default class List extends React.Component {
     static navigationOptions = ({navigation}) => {
         return {
-            title: `Météo dans / ${navigation.state.params.city}`
+            header: { visible:false },
         }
        
     }
