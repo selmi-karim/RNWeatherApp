@@ -20,11 +20,13 @@ class Search extends React.Component {
     render() {
         return (
             <View style={globalStyle.container}>
+                <Text style={globalStyle.dayTitle} > 
+                Enter a City name (in Tunisia) and saw current weather data 
+                </Text>
                 <TextInput 
                 underLineColorAndroid='transparent'
                 onChangeText={(text) => this.setCity(text)}
                 style={{height:40, borderColor: 'gray', borderWidth: 1}}
-                defaultValue={this.state.city}            
                 />
                 <Button style={globalStyle.button} onPress={ () => this.submit()} title="Find" />
             </View>
